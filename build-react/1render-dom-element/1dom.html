@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-class {
+            border: 2px solid red;
+            }
+    </style>
+</head>
+<body>
+    <div id="root">
+    </div>
+</body>
+<script>
+// Get an element by id
+const domRoot = document.getElementById("root");
+// Create a new element given a tag name
+const domInput = document.createElement("input");
+// Set properties
+domInput["type"] = "text";
+domInput["value"] = "Hi world";
+domInput["className"] = "my-class";
+// Listen to events
+domInput.addEventListener("change", e => alert(e.target.value));
+// Create a text node
+const domText = document.createTextNode("");
+// Set text node content
+domText["nodeValue"] = "Foo";
+// Append an element
+domRoot.appendChild(domInput);
+// Append a text node (same as previous)
+domRoot.appendChild(domText);
+</script>
+</html>
